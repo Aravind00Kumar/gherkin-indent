@@ -21,7 +21,7 @@ Use the following code snippets to add scenarios and steps.
 
 _Note: Select steps and use comment shortcut keys to comment the steps._
 
-![Screen Shot\](https://raw.githubusercontent.com/Aravind00Kumar/gherkin-indent/master/images/screen_shot.png)
+![Screen Shot\](https://raw.githubusercontent.com/Aravind00Kumar/gherkin-indent/master/images/screen_shot.gif)
 
 ## Requirements
 
