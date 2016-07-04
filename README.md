@@ -7,7 +7,7 @@ Automatically sets the indentation for tables and steps for gherkin language (cu
 apply `gherkin indent` from the command palette Ctrl-Shift-P (Windows, Linux) or Cmd-Shift-P (OSX).
   
 
-![Screen Shot\]\(images/screen_shot.png\)
+![Screen Shot\](https://raw.githubusercontent.com/Aravind00Kumar/gherkin-indent/master/images/screen_shot.png)
 
 ## Requirements
 
