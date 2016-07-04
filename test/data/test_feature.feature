@@ -1,7 +1,8 @@
 Feature: Overlay Component
  In order to allow system integrator to display model dialog
   As a developer,
- I want to develop a widget displays a dialog window that forces the user to interact with it before they can go back to using the parent application
+ I want to develop a widget displays a dialog window that forces the user to interact with it before 
+ they can go back to using the parent application
 
 Scenario: Display overlay
   Given Am on Overlay example page
@@ -23,8 +24,6 @@ Scenario Outline: Configure overlay title
    When I select overlay to display
    Then I should see overlay title as <title>
     And I should see overlay title as <title>
-
-
 Examples:
 |        title       |index|
 |   "Server Error"   |  2  |
