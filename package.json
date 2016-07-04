@@ -11,6 +11,19 @@
   "categories": [
     "Languages"
   ],
+  "keywords": [
+    "gherkin","cucumberjs"
+  ],
+  "author": {
+    "email": "aravindkumarmail@gmail.com",
+    "name": "Aravind Kumar P"
+  },
+  "galleryBanner": {
+    "color": "#8bc34a",
+    "theme": "dark"
+  },
+  "readme": "https://github.com/Aravind00Kumar/gherkin-indent/blob/master/README.md",
+  "license": "LICENCE",  
   "activationEvents": [
     "onCommand:gherkin-indent.format"
   ],

@@ -36,10 +36,6 @@ Added features
  
 Feel free to contribute by posting issues or pull requests on [gherkin-indent](https://github.com/Aravind00Kumar/gherkin-indent)
 
-## Author
- 
-Aravind Kumar ([aravindkumarmail@gmail.com](mailto:aravindkumarmail@gmail.com))
-
 -----------------------------------------------------------------------------------------------------------
 
 ### For more information

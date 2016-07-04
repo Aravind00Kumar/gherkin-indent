@@ -10,7 +10,7 @@
             "args": [
                 "--extensionDevelopmentPath=${workspaceRoot}"
             ],
-            "stopOnEntry": false
+            "stopOnEntry": false            
         },
         {
             "name": "Launch Tests",
