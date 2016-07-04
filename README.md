@@ -1,12 +1,11 @@
 # gherkin-formatter README
 
-This is the README for your extension "gherkin-formatter". After writing up a brief description, we recommend including the following sections.
+Automatically sets the indentation for tables and steps for gherkin language (cucumberjs) .feature files
 
-## Features
+## How to use
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
+apply `gherkin indent` from the command palette Ctrl-Shift-P (Windows, Linux) or Cmd-Shift-P (OSX).
+  
 
 \!\[feature X\]\(images/feature-x.png\)
 
@@ -14,7 +13,8 @@ For example if there is an image subfolder under your extension project workspac
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+* You will need to install Visual Studio Code 1.2.1 or higher.
+* From the command palette Ctrl-Shift-P (Windows, Linux) or Cmd-Shift-P (OSX) select Install Extension, choose `Gherkin Indent` and reload Visual Studio Code.
 
 ## Extension Settings
 
@@ -24,8 +24,7 @@ For example:
 
 This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+* `gherkin-indent.stepIndent`: Sets the indent value. (default is 7). Note: stepIndent includes step name length. 
 
 ## Known Issues
 
@@ -33,33 +32,24 @@ Calling out known issues can help limit users opening duplicate issues against y
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+Added features 
+* Auto table formatting for examples.
+* Indentation for steps Given, When, Then, And, But 
 
-### 1.0.1
+## Contributions
+ 
+Feel free to contribute by posting issues or pull requests on [gherkin-indent](https://github.com/Aravind00Kumar/gherkin-indent)
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+## Author
+ 
+Aravind Kumar ([aravindkumarmail@gmail.com](mailto:aravindkumarmail@gmail.com))
 
 -----------------------------------------------------------------------------------------------------------
 
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
 ### For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+* [Gherkin](http://docs.behat.org/en/v3.0/guides/1.gherkin.html)
 
 **Enjoy!**

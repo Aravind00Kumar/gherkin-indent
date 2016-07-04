@@ -1,8 +1,8 @@
-var Table = function () {
+var Indent = function () {
     this.originalText = "";
     this.lines = [];
     this.languageIndex = '0';
-    this.tabSpace = 12;
+    this.stepIndent = 7;
     var words = {
         scenario: ['Scenario'],
         given: ['Given'],
@@ -31,12 +31,12 @@ var Table = function () {
 
     this.format = function (originalText) {
         this.init(originalText);
-        this.formatScenarios();
+        this.formatSteps();
 
         var tables = this.extract();
         var formattedTables = [];
         tables.forEach(function (table) {
-            var formattedTable = this.formatRows(table);
+            var formattedTable = this.formatTableRows(table);
             formattedTable.forEach(function (element) {
                 this.lines[element.lineNumber] = element.value;
             }, this);
@@ -61,7 +61,7 @@ var Table = function () {
         return tables;
     }
 
-    this.formatScenarios = function () {
+    this.formatSteps = function () {
         var firstOccurrence;
         this.lines.forEach(function (line, index) {
             if (this.isValidStep(line, activeWords.given)) {
@@ -89,7 +89,7 @@ var Table = function () {
     }
 
 
-    this.formatRows = function (rows) {
+    this.formatTableRows = function (rows) {
         var columns = [], i, j, max;
         rows.forEach(function (element) {
             columns.push(element.value.split('|'));
@@ -132,10 +132,10 @@ var Table = function () {
     }
 
     this.leftPad = function (str, stepName) {
-        if (this.tabSpace > stepName.length) {
+        if (this.stepIndent > stepName.length) {
             var from = str.indexOf(stepName);
             var rem = str.substr(from, str.length - from);
-            var step = Array(this.tabSpace - stepName.length + 1).join(" ") + rem;
+            var step = Array(this.stepIndent - stepName.length + 1).join(" ") + rem;
             return step;
         }
         return str;
@@ -143,4 +143,4 @@ var Table = function () {
 
 }
 
-module.exports.Table = Table;
+module.exports = Indent;

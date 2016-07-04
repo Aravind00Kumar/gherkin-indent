@@ -1,26 +1,36 @@
 {
   "name": "gherkin-formatter",
   "displayName": "Gherkin Formatter",
-  "description": "Syntax formatter for gherkin language (cucumberjs) .feature files",
-  "version": "0.0.1",
-  "publisher": "Aravind",
+  "description": "Automatically sets the indentation for tables and steps for gherkin language (cucumberjs) .feature files",
+  "version": "1.0.0",
+  "publisher": "Aravind Kumar",
   "engines": {
-    "vscode": "^1.0.0"
+    "vscode": "^1.2.0"
   },
   "categories": [
-    "Other"
+    "Languages"
   ],
   "activationEvents": [
-    "onCommand:gherkin-formatter.format"
+    "onCommand:gherkin-indent.format"
   ],
   "main": "./src/extension",
   "contributes": {
     "commands": [
       {
-        "command": "gherkin-formatter.format",
-        "title": "format gherkin"
+        "command": "gherkin-indent.format",
+        "title": "gherkin indent"
+      }],
+      "configuration": {
+       "type":"object",
+       "title": "Gherkin Indentation Configuration",
+       "properties": {
+         "gherkin-indent.stepIndent":{
+           "type": "number",
+           "default": "7",
+           "description": "Default indentation for Given, When, Then, And, But steps"
+         }
+       } 
       }
-    ]
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install"
