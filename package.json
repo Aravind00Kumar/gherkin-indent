@@ -1,7 +1,7 @@
 {
   "name": "gherkin-indent",
   "displayName": "Gherkin Indent",
-  "description": "Automatically sets the indentation for tables and steps for gherkin language (cucumberjs) .feature files",
+  "description": "Gherkin Indent sets the indentation for Gherkin (cucumberjs) steps and examples.  Automatically applies coloring for features, scenarios and steps in .feature files",
   "version": "2.0.0",
   "publisher": "AravindKumar",
   "icon": "images/logo.png",
