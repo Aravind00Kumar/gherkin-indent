@@ -1,8 +1,12 @@
-var Indent = function () {
+var Indent = function (config) {
+    this.stepIndent = 7;
+    
+    if (config && config.stepIndent)
+        this.stepIndent = config.stepIndent;
+
     this.originalText = "";
     this.lines = [];
     this.languageIndex = '0';
-    this.stepIndent = 7;
     var words = {
         scenario: ['Scenario'],
         given: ['Given'],
@@ -21,7 +25,7 @@ var Indent = function () {
         but: words.but[this.languageIndex],
     }
 
-    this.init = function(originalText){
+    this.init = function (originalText) {
         var formatedText = '';
         this.originalText = originalText;
         this.lines = this.originalText.split('\r\n');

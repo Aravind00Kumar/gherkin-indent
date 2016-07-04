@@ -1,4 +1,4 @@
-# gherkin-formatter README
+# gherkin-indent
 
 Automatically sets the indentation for tables and steps for gherkin language (cucumberjs) .feature files
 
@@ -25,10 +25,6 @@ For example:
 This extension contributes the following settings:
 
 * `gherkin-indent.stepIndent`: Sets the indent value. (default is 7). Note: stepIndent includes step name length. 
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
 ## Release Notes
 

@@ -2,8 +2,11 @@ var vscode = require('vscode');
 var Indent = require('./indent');
 
 var languageSelectors = ['feature'];
+var config;
 
 function activate(context) {
+    
+
     var disposable = vscode.commands.registerCommand('gherkin-indent.format', function () {
         format()
             .then(function () {
@@ -17,6 +20,7 @@ exports.activate = activate;
 
 
 function format() {
+    var config = vscode.workspace.getConfiguration('gherkin-indent');
     var active = vscode.window.activeTextEditor;
     if (!active)
         return;
@@ -25,7 +29,7 @@ function format() {
     var document = active.document;
     var range = new vscode.Range(0, 0, document.lineCount, document.getText().length);
     var originalText = document.getText(document.validateRange(range));
-    var formatedText = new Indent().format(originalText);
+    var formatedText = new Indent(config).format(originalText);
 
     return updateEditor(formatedText, active, range);
 }
