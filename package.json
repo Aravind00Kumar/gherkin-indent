@@ -1,9 +1,10 @@
 {
-  "name": "gherkin-formatter",
-  "displayName": "Gherkin Formatter",
+  "name": "gherkin-indent",
+  "displayName": "Gherkin Indent",
   "description": "Automatically sets the indentation for tables and steps for gherkin language (cucumberjs) .feature files",
   "version": "1.0.0",
-  "publisher": "Aravind Kumar",
+  "publisher": "AravindKumar",
+  "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.2.0"
   },
@@ -19,26 +20,24 @@
       {
         "command": "gherkin-indent.format",
         "title": "gherkin indent"
-      }],
-      "configuration": {
-       "type":"object",
-       "title": "Gherkin Indentation Configuration",
-       "properties": {
-         "gherkin-indent.stepIndent":{
-           "type": "number",
-           "default": "7",
-           "description": "Default indentation for Given, When, Then, And, But steps"
-         }
-       } 
       }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Gherkin Indentation Configuration",
+      "properties": {
+        "gherkin-indent.stepIndent": {
+          "type": "number",
+          "default": "7",
+          "description": "Default indentation for Given, When, Then, And, But steps"
+        }
+      }
+    }
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
   "devDependencies": {
     "vscode": "^0.11.0"
-  },
-  "dependencies": {
-    "tmp": "0.0.28"
   }
 }

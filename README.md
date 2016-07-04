@@ -7,9 +7,7 @@ Automatically sets the indentation for tables and steps for gherkin language (cu
 apply `gherkin indent` from the command palette Ctrl-Shift-P (Windows, Linux) or Cmd-Shift-P (OSX).
   
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![Screen Shot\]\(images/screen_shot.png\)
 
 ## Requirements
 
