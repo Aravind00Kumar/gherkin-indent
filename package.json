@@ -2,7 +2,7 @@
   "name": "gherkin-indent",
   "displayName": "Gherkin Indent",
   "description": "Automatically sets the indentation for tables and steps for gherkin language (cucumberjs) .feature files",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "publisher": "AravindKumar",
   "icon": "images/logo.png",
   "engines": {
@@ -12,7 +12,8 @@
     "Languages"
   ],
   "keywords": [
-    "gherkin","cucumberjs"
+    "gherkin",
+    "cucumberjs"
   ],
   "author": {
     "email": "aravindkumarmail@gmail.com",
@@ -20,19 +21,51 @@
   },
   "galleryBanner": {
     "color": "#8bc34a",
-    "theme": "dark"
+    "theme": "light"
   },
-  "readme": "https://github.com/Aravind00Kumar/gherkin-indent/blob/master/README.md",
-  "license": "LICENCE",  
+  "readme": "README.md",
+  "license": "LICENCE",
   "activationEvents": [
     "onCommand:gherkin-indent.format"
   ],
   "main": "./src/extension",
   "contributes": {
+    "languages": [
+      {
+        "id": "gherkin",
+        "aliases": [
+          "gherkin",
+          "feature",
+          "cucumber"
+        ],
+        "extensions": [
+          ".feature"
+        ],
+        "configuration": "./feature.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gherkin",
+        "scopeName": "text.gherkin.syntax",
+        "path": "./syntaxes/feature.tmLanguage"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "gherkin",
+        "path": "./snippets/feature.json"
+      }
+    ],
+    "keybindings": {
+      "command": "gherkin-indent.format",
+      "key": "ctrl+g ctrl+f",
+      "when": "editorTextFocus"
+    },
     "commands": [
       {
         "command": "gherkin-indent.format",
-        "title": "gherkin indent"
+        "title": "Gherkin Indent"
       }
     ],
     "configuration": {

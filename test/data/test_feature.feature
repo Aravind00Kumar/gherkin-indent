@@ -12,11 +12,11 @@ Scenario Outline: Configure overlay title
   Given I configure the <title>
    When I select overlay to display
    Then I should see overlay title as <title>
-
+   
 Examples:
-  |          title      |
-  |    "Server Error"   |
-  | "404 Page not found"|
+|        title       |
+|   "Server Error"   |
+|"404 Page not found"|
 
 Scenario Outline: Configure overlay title
  #           Given I configure the <title>
@@ -26,9 +26,9 @@ Scenario Outline: Configure overlay title
 
 
 Examples:
-|         title        | index |
-|    "Server Error"    |   2   |
-| "404 Page not found" |   5   |
+|        title       |index|
+|   "Server Error"   |  2  |
+|"404 Page not found"|  5  |
 
 Scenario Outline: Configure overlay title
   Given I configure the <title>
@@ -37,7 +37,8 @@ Scenario Outline: Configure overlay title
     And I should see overlay title as <title>
 
 Examples:
-|         title        | index | count|   error  |
-|    "Server Error"    |   2   |   12 |    102   |
-| "404 Page not found" |   5   |  12  |"no error"|
+|        title       |index|count|   error  |
+|   "Server Error"   |  2  |  12 |    102   |
+|"404 Page not found"|  5  |  12 |"no error"|
+
 
