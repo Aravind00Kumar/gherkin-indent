@@ -2,7 +2,7 @@
   "name": "gherkin-indent",
   "displayName": "Gherkin Indent",
   "description": "Automatically sets the indentation for tables and steps for gherkin language (cucumberjs) .feature files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "AravindKumar",
   "icon": "images/logo.png",
   "engines": {

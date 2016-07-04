@@ -1,6 +1,6 @@
 var Indent = function (config) {
     this.stepIndent = 7;
-    
+
     if (config && config.stepIndent)
         this.stepIndent = config.stepIndent;
 
@@ -94,9 +94,15 @@ var Indent = function (config) {
 
 
     this.formatTableRows = function (rows) {
-        var columns = [], i, j, max;
-        rows.forEach(function (element) {
-            columns.push(element.value.split('|'));
+        var columns = [], indexes = [], i, j, max;
+        rows.forEach(function (element, index) {
+            if (this.isValidStep(element.value, "|")) {
+                var newstrings = element.value.match(/(?=\S)[^\|]+?(?=\s*(\||$))/g);
+                newstrings.splice(0, 0,"");
+                newstrings.push("");
+                columns.push(newstrings);
+                indexes.push(index);
+            };
         }, this);
 
         for (i = 0; i < columns[0].length; i++) {
@@ -109,8 +115,8 @@ var Indent = function (config) {
             }
         }
 
-        for (i = 0; i < rows.length; i++) {
-            rows[i].value = columns[i].join('|');
+        for (i = 0; i < indexes.length; i++) {
+                rows[indexes[i]].value = columns[i].join('|');
         }
 
         return rows;
@@ -118,10 +124,8 @@ var Indent = function (config) {
 
     this.longest = function (col, elements) {
         var max = elements[0][col].length;
-        if (elements[0][col].length > 1) {
-            for (var i = 1; i < elements.length; i++) {
-                if (elements[i][col].length > max) max = elements[i][col].length;
-            }
+        for (var i = 1; i < elements.length; i++) {
+            if (elements[i][col].length > max) max = elements[i][col].length;
         }
         return max;
     }

@@ -16,15 +16,15 @@ apply `gherkin indent` from the command palette Ctrl-Shift-P (Windows, Linux) or
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
 * `gherkin-indent.stepIndent`: Sets the indent value. (default is 7). Note: stepIndent includes step name length. 
 
 ## Release Notes
+
+### 1.0.1
+
+* bug fixes.
 
 ### 1.0.0
 
